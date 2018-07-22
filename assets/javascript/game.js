@@ -1,3 +1,7 @@
+//Remember try to do everything with jquery
+
+
+
 //dont forget to wrap your js in the ready function so the js wont attempt anything before the DOM is fully loaded
 $(document).ready(function(){
     //initialize the global variables
@@ -5,7 +9,7 @@ $(document).ready(function(){
     var losses = 0;
     //this the value holder for the player total score
     var crystal_count = 0;
-    document.getElementById("crystal_count").innerHTML = crystal_count;
+    $("#crystal_count").html(crystal_count);
     //this is the randomly generated target number 19-120
     var crystal_target = Math.floor(Math.random()*102)+19;
     document.getElementById("crystal_target").innerHTML = crystal_target;
