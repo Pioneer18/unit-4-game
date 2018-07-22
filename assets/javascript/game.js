@@ -3,6 +3,7 @@ $(document).ready(function(){
     //initialize the global variables
     //this the value holder for the player total score
     var crystal_count = 0;
+    document.getElementById("crystal_count").innerHTML = crystal_count;
     //this is the randomly generated target number 19-120
     var crystal_target = Math.floor(Math.random()*102)+19;
     document.getElementById("crystal_target").innerHTML = crystal_target;
@@ -34,27 +35,27 @@ $(document).ready(function(){
         //update the crystal_count with the value of the clicked button
         crystal_count += crystal_1;
         document.getElementById("crystal_count").innerHTML = crystal_count;
-        //updat the crystal_count display
-        document.getElementById("crystal_count").innerHTML = crystal_count;
       }
-      if(userPick = "cr_2"){
+      
+      if(userPick == "cr_2"){
         //update the crystal_count with the value of the clicked button
         crystal_count += crystal_2;
         //udpate the crystal_count display
         document.getElementById("crystal_count").innerHTML = crystal_count;
       }
-      if(userPick = "cr_3"){
+      if(userPick == "cr_3"){
         //update the crystal_count with the value of the clicked button
         crystal_count += crystal_3;
         //udpate the crystal_count display
         document.getElementById("crystal_count").innerHTML = crystal_count;
       }
-      if(userPick = "cr_4"){
+      if(userPick == "cr_4"){
         //update the crystal_count with the value of the clicked button
         crystal_count += crystal_4;
         //udpate the crystal_count display
         document.getElementById("crystal_count").innerHTML = crystal_count;
       }
+      
 
       //The player will gain a win if the crystal_count equals the crystal_target and they will lose if it goes over
       //On either a win or loss the game will reset the crystal_target, the button values, and the crystal-count will be 0
