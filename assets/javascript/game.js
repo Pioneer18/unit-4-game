@@ -30,6 +30,7 @@ $(document).ready(function(){
         console.log("counter before adding on " + crystal_count);
         crystal_count += crystal_1;
         console.log("counter after adding on " + crystal_count);
+        document.getElementById("crystal_count").innerHTML = crystal_count;
       }
 
     });
