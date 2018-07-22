@@ -5,12 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--the bs4 row and col system is used to setup the game layout-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <!--additional css styles are added to the bs4 to flesh out the style-->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <!--jquery library is used to make the game truly interactive-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!--the html is designed with bs4 to make the game playable on mobile devices as well-->
+    <div class="row">
+        <!--the crystal count card-->
+        <div class="card">
+            <div class="card-header">Crystal Counter</div>
+            <div class="card-body">
+                <!--the score will be .innerHtml() inserted at this div id-->
+                <p id="crystal_count" class="d-flex justify-content-center">__</p>
+            </div>
+        </div>
+        <!--the crystal_target-->
+        <div class="card">
+                <div class="card-header">Crystal Target</div>
+                <div class="card-body">
+                    <!--the score will be .innerHtml() inserted at this div id-->
+                    <p id="crystal_target" class="d-flex justify-content-center">__</p>
+                </div>
+            </div>
+    </div>
 
+    <!--the games is written in the external game.js file-->
     <script src="assets/javascript/game.js"></script>
 </body>
 </html>
