@@ -65,7 +65,9 @@ $(document).ready(function(){
         crystal_count = 0;
         document.getElementById("crystal_count").innerHTML = crystal_count;
         crystal_1 = Math.floor(Math.random()*12)+1;  
-
+        crystal_2 = Math.floor(Math.random()*12)+1;
+        crystal_3 = Math.floor(Math.random()*12)+1;
+        crystal_4 = Math.floor(Math.random()*12)+1;
       }
     });
 
