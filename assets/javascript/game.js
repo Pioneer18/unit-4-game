@@ -20,16 +20,30 @@ $(document).ready(function(){
       //the rest of the game must be contained within this onclick funciton
       //ID which button was clicked
       var userPick = this.id
-      console.log("this should be doing something?");
-      console.log(userPick);
+      //TODO: make this a function
       if(userPick == "cr_1"){
-        //this is testing that the onclick function is selecting the right button
-        //and updating the correct value
-        console.log(crystal_1);
-        //add the button's value to the crystal_counter
-        console.log("counter before adding on " + crystal_count);
+        //update the crystal_count with the value of the clicked button
         crystal_count += crystal_1;
-        console.log("counter after adding on " + crystal_count);
+        document.getElementById("crystal_count").innerHTML = crystal_count;
+        //updat the crystal_count display
+        document.getElementById("crystal_count").innerHTML = crystal_count;
+      }
+      if(userPick = "cr_2"){
+        //update the crystal_count with the value of the clicked button
+        crystal_count += crystal_2;
+        //udpate the crystal_count display
+        document.getElementById("crystal_count").innerHTML = crystal_count;
+      }
+      if(userPick = "cr_3"){
+        //update the crystal_count with the value of the clicked button
+        crystal_count += crystal_3;
+        //udpate the crystal_count display
+        document.getElementById("crystal_count").innerHTML = crystal_count;
+      }
+      if(userPick = "cr_4"){
+        //update the crystal_count with the value of the clicked button
+        crystal_count += crystal_4;
+        //udpate the crystal_count display
         document.getElementById("crystal_count").innerHTML = crystal_count;
       }
 
