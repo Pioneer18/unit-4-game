@@ -22,10 +22,14 @@ $(document).ready(function(){
       var userPick = this.id
       console.log("this should be doing something?");
       console.log(userPick);
-      if(userPick === cr_1){
+      if(userPick == "cr_1"){
         //this is testing that the onclick function is selecting the right button
         //and updating the correct value
         console.log(crystal_1);
+        //add the button's value to the crystal_counter
+        console.log("counter before adding on " + crystal_count);
+        crystal_count += crystal_1;
+        console.log("counter after adding on " + crystal_count);
       }
 
     });
