@@ -71,6 +71,7 @@ $(document).ready(function(){
         console.log("the new secret crystal values " + crystal_1, crystal_2, crystal_3,crystal_4);
         if(crystal_count == crystal_target){
           wins++;
+          document.getElementById("wins").innerHTML = "Wins: " + wins;
           console.log("wins " + wins);
           crystal_target = Math.floor(Math.random()*102)+19;
           document.getElementById("crystal_target").innerHTML = crystal_target;
@@ -79,6 +80,7 @@ $(document).ready(function(){
         }
         else if(crystal_count > crystal_target){
           losses++;
+          document.getElementById("losses").innerHTML = "Losses: " + losses;
           console.log("losses " + losses);
           crystal_target = Math.floor(Math.random()*102)+19;
           document.getElementById("crystal_target").innerHTML = crystal_target;
