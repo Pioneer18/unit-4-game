@@ -20,7 +20,8 @@ $(document).ready(function(){
       //the rest of the game must be contained within this onclick funciton
       //ID which button was clicked
       var userPick = this.id
-      console.log("this should be doing something?")
+      console.log("this should be doing something?");
+      console.log(userPick);
       if(userPick === cr_1){
         //this is testing that the onclick function is selecting the right button
         //and updating the correct value
