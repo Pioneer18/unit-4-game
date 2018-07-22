@@ -7,14 +7,14 @@ $(document).ready(function(){
     var crystal_target = Math.floor(Math.random()*102)+19;
     document.getElementById("crystal_target").innerHTML = crystal_target;
     //this statement should randomly generate a number for each crystal
-    var crystal_1 = Math.floor(Math.random()*12)+1, crystal_2 = Math.floor(Math.random()*12)+1,
-    crystal_3 = Math.floor(Math.random()*12)+1, crystal_4 = Math.floor(Math.random()*12)+1;
+    var crystal_1 = Math.floor(Math.random()*11)+1, crystal_2 = Math.floor(Math.random()*11)+1,
+    crystal_3 = Math.floor(Math.random()*11)+1, crystal_4 = Math.floor(Math.random()*11)+1;
     //just checking it works
     console.log(crystal_1,crystal_2, crystal_3,crystal_4); 
 
     //functions to be called
     var new_crystal = function(){
-      Math.floor(Math.random()*12)+1;
+      Math.floor(Math.random()*11)+1;
     }
 
     var new_crystal_target = function(){
@@ -64,10 +64,10 @@ $(document).ready(function(){
         document.getElementById("crystal_target").innerHTML = crystal_target;
         crystal_count = 0;
         document.getElementById("crystal_count").innerHTML = crystal_count;
-        crystal_1 = Math.floor(Math.random()*12)+1;  
-        crystal_2 = Math.floor(Math.random()*12)+1;
-        crystal_3 = Math.floor(Math.random()*12)+1;
-        crystal_4 = Math.floor(Math.random()*12)+1;
+        crystal_1 = Math.floor(Math.random()*11)+1;  
+        crystal_2 = Math.floor(Math.random()*11)+1;
+        crystal_3 = Math.floor(Math.random()*11)+1;
+        crystal_4 = Math.floor(Math.random()*11)+1;
       }
     });
 
