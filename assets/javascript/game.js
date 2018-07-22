@@ -5,12 +5,21 @@ $(document).ready(function(){
     var crystal_count = 0;
     //this is the randomly generated target number 19-120
     var crystal_target = Math.floor(Math.random()*102)+19;
-    console.log("this is the random number " + crystal_target);
+    document.getElementById("crystal_target").innerHTML = crystal_target;
     //this statement should randomly generate a number for each crystal
     var crystal_1 = Math.floor(Math.random()*12)+1, crystal_2 = Math.floor(Math.random()*12)+1,
     crystal_3 = Math.floor(Math.random()*12)+1, crystal_4 = Math.floor(Math.random()*12)+1;
     //just checking it works
     console.log(crystal_1,crystal_2, crystal_3,crystal_4); 
+
+    //functions to be called
+    var new_crystal = function(){
+      Math.floor(Math.random()*12)+1;
+    }
+
+    var new_crystal_target = function(){
+      Math.floor(Math.random()*102)+19;
+    }
 
     //This section starts the onclick function that will control the rest of the game
     //there will be one onclick that targets the class of button
@@ -47,6 +56,17 @@ $(document).ready(function(){
         document.getElementById("crystal_count").innerHTML = crystal_count;
       }
 
+      //The player will gain a win if the crystal_count equals the crystal_target and they will lose if it goes over
+      //On either a win or loss the game will reset the crystal_target, the button values, and the crystal-count will be 0
+      if(crystal_count >= crystal_target){
+        //reset the target and the buttons values
+        crystal_target = Math.floor(Math.random()*102)+19;
+        document.getElementById("crystal_target").innerHTML = crystal_target;
+        crystal_count = 0;
+        document.getElementById("crystal_count").innerHTML = crystal_count;
+        crystal_1 = Math.floor(Math.random()*12)+1;  
+
+      }
     });
 
 
