@@ -1,3 +1,21 @@
-#cr_3 img {
-    
+body{
+    background-image:url(../images/black_lozenge.png);
+}
+
+.card-header{
+    color:#fff;
+    background:#173e43;
+}
+
+.card-body{
+    background:#dddfd4;
+    color:#173e43;
+}
+
+.card{
+    margin-right: 10px;
+}
+
+.score{
+    padding-right:40px;
 }
