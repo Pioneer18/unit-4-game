@@ -8,6 +8,7 @@
     <!--the bs4 row and col system is used to setup the game layout-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <!--additional css styles are added to the bs4 to flesh out the style-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <!--jquery library is used to make the game truly interactive-->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -17,25 +18,26 @@
         <!--the html is designed with bs4 to make the game playable on mobile devices as well-->
         <div class="row mt-3 d-flex flex-row justify-content-center">
             <!--the crystal count card-->
-            <div class="card">
+            <div class="card d-flex">
                 <div class="card-header">Crystal Counter</div>
-                <div class="card-body">
+                <div class="card-body align-items-center d-flex justify-content-center">
                     <!--the score will be .innerHtml() inserted at this div id-->
                     <p id="crystal_count" class="d-flex justify-content-center">__</p>
                 </div>
             </div>
             <!--the crystal_target-->
-            <div class="card">
+            <div class="card d-flex">
                 <div class="card-header">Crystal Target</div>
-                <div class="card-body">
+                <div class="card-body align-items-center d-flex justify-content-center">
                     <!--the score will be .innerHtml() inserted at this div id-->
                     <p id="crystal_target" class="d-flex justify-content-center">__</p>
                 </div>
             </div>
             <!--this col has two cards in it-->
-            <div class="card">
+            <div class="card d-flex">
                 <div class="card-header">Score</div>
-                <div class="card-body score">
+                <div class="card-body align-items-center d-flex justify-content-center score">
+                <div class="card-body  align-items-center score">
                     <p id="wins">Wins:</p>
                     <p id="losses">losses:</p>
                 </div>
