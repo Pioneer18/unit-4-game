@@ -16,8 +16,7 @@ $(document).ready(function(){
     //this statement should randomly generate a number for each crystal
     var crystal_1 = Math.floor(Math.random()*11)+1, crystal_2 = Math.floor(Math.random()*11)+1,
     crystal_3 = Math.floor(Math.random()*11)+1, crystal_4 = Math.floor(Math.random()*11)+1;
-    //just checking it works
-    console.log(crystal_1,crystal_2, crystal_3,crystal_4); 
+   
 
     //functions to be called
     var new_crystal = function(){
@@ -36,30 +35,30 @@ $(document).ready(function(){
       //the rest of the game must be contained within this onclick funciton
       //ID which button was clicked
       var userPick = this.id
-      //TODO: make this a function
+      //TODO: make this if block a function called crystal_selection()
       if(userPick == "cr_1"){
         //update the crystal_count with the value of the clicked button
         crystal_count += crystal_1;
-        document.getElementById("crystal_count").innerHTML = crystal_count;
+        $("#crystal_count").html(crystal_count);
       }
       
       if(userPick == "cr_2"){
         //update the crystal_count with the value of the clicked button
         crystal_count += crystal_2;
         //udpate the crystal_count display
-        document.getElementById("crystal_count").innerHTML = crystal_count;
+        $("#crystal_count").html(crystal_count);
       }
       if(userPick == "cr_3"){
         //update the crystal_count with the value of the clicked button
         crystal_count += crystal_3;
         //udpate the crystal_count display
-        document.getElementById("crystal_count").innerHTML = crystal_count;
+        $("#crystal_count").html(crystal_count);
       }
       if(userPick == "cr_4"){
         //update the crystal_count with the value of the clicked button
         crystal_count += crystal_4;
         //udpate the crystal_count display
-        document.getElementById("crystal_count").innerHTML = crystal_count;
+        $("#crystal_count").html(crystal_count);
       }
       
 
@@ -72,24 +71,21 @@ $(document).ready(function(){
         crystal_2 = Math.floor(Math.random()*11)+1;
         crystal_3 = Math.floor(Math.random()*11)+1;
         crystal_4 = Math.floor(Math.random()*11)+1;
-        console.log("the new secret crystal values " + crystal_1, crystal_2, crystal_3,crystal_4);
         if(crystal_count == crystal_target){
           wins++;
-          document.getElementById("wins").innerHTML = "Wins: " + wins;
-          console.log("wins " + wins);
+          $("#wins").html("Wins: " + wins);
           crystal_target = Math.floor(Math.random()*102)+19;
-          document.getElementById("crystal_target").innerHTML = crystal_target;
+          $("#crystal_target").html(crystal_target);
           crystal_count = 0;
-          document.getElementById("crystal_count").innerHTML = crystal_count;
+          $("#crystal_count").html(crystal_count);
         }
         else if(crystal_count > crystal_target){
           losses++;
-          document.getElementById("losses").innerHTML = "Losses: " + losses;
-          console.log("losses " + losses);
+          $("#losses").html("Losses: " + losses);
           crystal_target = Math.floor(Math.random()*102)+19;
-          document.getElementById("crystal_target").innerHTML = crystal_target;
+          $("#crystal_target").html(crystal_target);
           crystal_count = 0;
-          document.getElementById("crystal_count").innerHTML = crystal_count;
+          $("#crystal_count").html(crystal_count);
         }
       }
     });
