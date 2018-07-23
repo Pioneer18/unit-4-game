@@ -11,23 +11,12 @@ $(document).ready(function(){
     var crystal_count = 0;
     $("#crystal_count").html(crystal_count);
     //this is the randomly generated target number 19-120
-    var crystal_target = Math.floor(Math.random()*102)+19;
+    var crystal_target = new_target();
     $("#crystal_target").html(crystal_target);
     //this statement should randomly generate a number for each crystal
-    var crystal_1 = newCrystal(), crystal_2 = newCrystal(),
-    crystal_3 = newCrystal(),crystal_4 = newCrystal();
+    var crystal_1 = new_crystal(), crystal_2 = new_crystal(),
+    crystal_3 = new_crystal(),crystal_4 = new_crystal();
    
-
-    //functions to be called
-    function newCrystal(){
-      var secret_value = Math.floor(Math.random()*11)+1;
-      return secret_value;
-    }
-
-    var new_crystal_target = function(){
-      Math.floor(Math.random()*102)+19;
-    }
-
     //This section starts the onclick function that will control the rest of the game
     //there will be one onclick that targets the class of button
     //then the id of the button is found and the crystal count is updated by that button's
@@ -35,6 +24,7 @@ $(document).ready(function(){
     $(".button").click(function(){
       //the rest of the game must be contained within this onclick funciton
       //ID which button was clicked
+      
       var userPick = this.id
       //TODO: make this if block a function called crystal_selection()
       if(userPick == "cr_1"){
@@ -68,14 +58,14 @@ $(document).ready(function(){
       //TODO: make this into a funciton
       if(crystal_count >= crystal_target){
         //reset the buttons values
-        crystal_1 = Math.floor(Math.random()*11)+1;  
-        crystal_2 = Math.floor(Math.random()*11)+1;
-        crystal_3 = Math.floor(Math.random()*11)+1;
-        crystal_4 = Math.floor(Math.random()*11)+1;
+        crystal_1 = new_crystal();  
+        crystal_2 = new_crystal();
+        crystal_3 = new_crystal();
+        crystal_4 = new_crystal();
         if(crystal_count == crystal_target){
           wins++;
           $("#wins").html("Wins: " + wins);
-          crystal_target = Math.floor(Math.random()*102)+19;
+          crystal_target = new_target();
           $("#crystal_target").html(crystal_target);
           crystal_count = 0;
           $("#crystal_count").html(crystal_count);
@@ -83,13 +73,27 @@ $(document).ready(function(){
         else if(crystal_count > crystal_target){
           losses++;
           $("#losses").html("Losses: " + losses);
-          crystal_target = Math.floor(Math.random()*102)+19;
+          crystal_target = new_target();
           $("#crystal_target").html(crystal_target);
           crystal_count = 0;
           $("#crystal_count").html(crystal_count);
         }
       }
     });
+
+    //functions to be called
+
+    //generates new values for the buttons
+    function new_crystal(){
+      var secret_value = Math.floor(Math.random()*11)+1;
+      return secret_value;
+    }
+
+    function new_target(){
+      var new_value = Math.floor(Math.random()*102)+19;
+      return new_value;
+    }
+
 
 
 });
