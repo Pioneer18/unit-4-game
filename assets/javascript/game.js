@@ -1,5 +1,5 @@
-//Remember try to do everything with jquery
-
+//"The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s)".
+// - W3 Schools
 
 
 //dont forget to wrap your js in the ready function so the js wont attempt anything before the DOM is fully loaded
@@ -12,7 +12,7 @@ $(document).ready(function(){
     $("#crystal_count").html(crystal_count);
     //this is the randomly generated target number 19-120
     var crystal_target = Math.floor(Math.random()*102)+19;
-    document.getElementById("crystal_target").innerHTML = crystal_target;
+    $("#crystal_target").html(crystal_target);
     //this statement should randomly generate a number for each crystal
     var crystal_1 = Math.floor(Math.random()*11)+1, crystal_2 = Math.floor(Math.random()*11)+1,
     crystal_3 = Math.floor(Math.random()*11)+1, crystal_4 = Math.floor(Math.random()*11)+1;
@@ -32,7 +32,7 @@ $(document).ready(function(){
     //there will be one onclick that targets the class of button
     //then the id of the button is found and the crystal count is updated by that button's
     //secret_value
-    $(".button").on("click", function(){
+    $(".button").click(function(){
       //the rest of the game must be contained within this onclick funciton
       //ID which button was clicked
       var userPick = this.id
