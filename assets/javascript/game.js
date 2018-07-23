@@ -2,7 +2,7 @@
 // - W3 Schools
 
 
-//dont forget to wrap your js in the ready function so the js wont attempt anything before the DOM is fully loaded
+//dont forget to wrap your js in the ready function so the js won't attempt anything before the DOM is fully loaded
 $(document).ready(function(){
     //initialize the global variables
     var wins = 0;
@@ -14,13 +14,14 @@ $(document).ready(function(){
     var crystal_target = Math.floor(Math.random()*102)+19;
     $("#crystal_target").html(crystal_target);
     //this statement should randomly generate a number for each crystal
-    var crystal_1 = Math.floor(Math.random()*11)+1, crystal_2 = Math.floor(Math.random()*11)+1,
-    crystal_3 = Math.floor(Math.random()*11)+1, crystal_4 = Math.floor(Math.random()*11)+1;
+    var crystal_1 = newCrystal(), crystal_2 = newCrystal(),
+    crystal_3 = newCrystal(),crystal_4 = newCrystal();
    
 
     //functions to be called
-    var new_crystal = function(){
-      Math.floor(Math.random()*11)+1;
+    function newCrystal(){
+      var secret_value = Math.floor(Math.random()*11)+1;
+      return secret_value;
     }
 
     var new_crystal_target = function(){
